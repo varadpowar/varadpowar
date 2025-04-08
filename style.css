@@ -1,0 +1,323 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    text-align: center;
+    color: black;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #b72e00;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: slideDown 0.5s ease-out; /* Slide-in animation for header */
+}
+
+header h1 {
+    color: #fefefc;
+    font-size: 32px;
+    animation: fadeIn 1s ease-out;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Tiro Devanagari Marathi';
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: line;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(161, 140, 24);
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://wallpapers.com/images/hd/chhatrapati-shivaji-maharaj-silhouette-7bkd01iujrqyr8tl.jpg') no-repeat center center/cover;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 5px black;
+    color: white;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    animation: bounceIn 1s ease-out;
+    margin-top: auto;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: #ffd700;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #cdaa00;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Forts Section */
+.forts {
+    margin: 50px 0;
+    animation: fadeIn 2s ease-out;
+}
+
+.forts h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #6d4c41;
+}
+
+.fort-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: slideUp 1.5s ease-out;
+}
+
+.fort {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.fort img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.fort img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.fort h3 {
+    margin: 10px 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.fort p {
+    color: #666;
+}
+
+/* About Section */
+.about {
+    padding: 40px;
+    background: #e0d4c3;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-out;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #6d4c41;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #6d4c41;
+    color: white;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .fort-container {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .fort {
+        width: 250px;
+    }
+
+    .fort-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Fort Section */
+    .fort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Button */
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navigation */
+    nav ul li {
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* Forts Section */
+    .fort {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .fort-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* About Section */
+    .about {
+        padding: 30px;
+    }
+
+    /* Button */
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
